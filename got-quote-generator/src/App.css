@@ -1,5 +1,33 @@
 .App {
   text-align: center;
+  background-image: url('https://www.sky.de/static/img/serienhighlights/sky_16-03_gameofthrones-uebersicht_sub_s.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.App-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7); /* 0.7 = 70% transparent, stärkerer Effekt */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.App > *:not(.App-bg-overlay) {
+  position: relative;
+  z-index: 1;
 }
 
 .App-logo {
@@ -14,14 +42,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 60px;
   font-size: calc(10px + 2vmin);
-  color: white;
+  background: transparent;
 }
 
 .App-link {
