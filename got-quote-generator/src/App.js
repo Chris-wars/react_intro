@@ -1,7 +1,24 @@
 import './App.css';
 
 const quote = "Der Winter naht.";
-const author = "Eddard Stark";
+const charakter = "Eddard Stark";
+
+const quotestyle = {
+  fontStyle: "italic",
+  color: "#61dafb",
+  fontSize: "1.5em",
+  marginBottom: "10px",
+  borderLeft: "4px solid #00c8ffff",
+  paddingLeft: "16px",
+  margin: "10px 0",
+};
+
+const characterStyle = {
+    fontSize: '0.8em',
+    color: '#ffd375ff',
+    marginTop: '5px',
+    display: 'block'
+  };
 
 function App() {
   return (
@@ -12,9 +29,9 @@ function App() {
         <p>Ein Ort für Weisheit (und Sarkasmus) aus Westeros.</p>
       </header>
       <main>
-        <blockquote>
+        <blockquote style={quotestyle}>
           <p>{quote}</p>
-          <footer>— {author}</footer>
+          <footer style={characterStyle}> — {charakter}</footer>
         </blockquote>
       </main>
       <footer className="App-footer">

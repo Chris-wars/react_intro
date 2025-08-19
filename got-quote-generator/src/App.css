@@ -9,10 +9,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: rgb(255, 255, 255);
   position: relative;
   overflow: hidden;
 }
+
+
 
 .App-bg-overlay {
   position: fixed;
