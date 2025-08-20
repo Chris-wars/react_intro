@@ -1,3 +1,22 @@
+/* Stil für Charaktername im QuoteCard */
+.quote-character {
+  font-size: 0.8em;
+  color: #ffd375ff;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Stil für QuoteCard */
+.quote-card {
+  font-style: italic;
+  color: #61dafb;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  border-left: 4px solid #00c8ff;
+  padding-left: 16px;
+  margin: 10px 0;
+}
+
 .App {
   text-align: center;
   background-image: url('https://www.sky.de/static/img/serienhighlights/sky_16-03_gameofthrones-uebersicht_sub_s.jpg');

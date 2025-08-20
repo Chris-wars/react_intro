@@ -1,4 +1,5 @@
 import './App.css';
+import QuoteCard from './QuoteCard';
 
   const gotQuotes = [
     { id: 1, quote: "Der Winter naht.", character: "Ned Stark", epic: true },
@@ -11,22 +12,9 @@ import './App.css';
     { id: 8, quote: "Valar Morghulis.", character: "Jaqen H'ghar", epic: true },
   ]
 
-const quotestyle = {
-  fontStyle: "italic",
-  color: "#61dafb",
-  fontSize: "1.5em",
-  marginBottom: "10px",
-  borderLeft: "4px solid #00c8ffff",
-  paddingLeft: "16px",
-  margin: "10px 0",
-};
 
-const characterStyle = {
-    fontSize: '0.8em',
-    color: '#ffd375ff',
-    marginTop: '5px',
-    display: 'block'
-  };
+
+
 
 function App() {
   return (
@@ -38,13 +26,12 @@ function App() {
       </header>
       <main>
         {gotQuotes.map(q => (
-          <blockquote key={q.id} style={quotestyle}>
-            "{q.quote}"
-            <footer style={characterStyle}>
-              - {q.character}
-              {q.epic && <span style={{ marginLeft: '10px' }}>🌟</span>}
-            </footer>
-          </blockquote>
+          <QuoteCard 
+            key={q.id}
+            quoteText={q.quote}
+            characterName={q.character}
+            isQuoteEpic={q.epic}
+          />
         ))}
       </main>
       <footer>
