@@ -14,9 +14,9 @@ import QuoteCard from './QuoteCard';
 
   ]
 
-
-
-
+function handleLike(characterName) {
+  console.log(`${characterName} Zitat wurde geliked!`);
+};
 
 function App() {
   return (
@@ -34,7 +34,10 @@ function App() {
             characterName={q.character}
             isQuoteEpic={q.epic}
           >
-            <button className="Button">Nice!
+            <button 
+            onClick={() => handleLike(q.character)}
+            type="button"
+            className="Button">Nice!
               <span role="img" aria-label="thumbs up">👍</span>
             </button>
           </QuoteCard>
