@@ -2,6 +2,7 @@ import './App.css';
 
 const quote = "Der Winter naht.";
 const charakter = "Eddard Stark";
+const isEpic = false;
 
 const quotestyle = {
   fontStyle: "italic",
@@ -34,7 +35,8 @@ function App() {
           <footer style={characterStyle}> — {charakter}</footer>
         </blockquote>
       </main>
-      <footer className="App-footer">
+      <footer style={characterStyle}>
+        {isEpic && <span style={{ marginLeft: '10px' }}>🌟</span>}
         <p>© 2025 Game of Thrones Zitat-Generator Deine Mutter Edition</p>
       </footer>
     </div>
