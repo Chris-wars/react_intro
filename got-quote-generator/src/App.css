@@ -1,3 +1,20 @@
+.Button {
+  background-color: #000000;
+  border: none;
+  border-radius: 2px;
+  color: rgb(255, 0, 0);
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.Button:hover {
+  background-color: #ffffff;
+}
+
+
+
 /* Stil für Charaktername im QuoteCard */
 .quote-character {
   font-size: 0.8em;

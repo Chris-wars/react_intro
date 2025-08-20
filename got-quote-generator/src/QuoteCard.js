@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function QuoteCard({ quoteText, characterName, isQuoteEpic }) {
+function QuoteCard({ quoteText, characterName, isQuoteEpic, children }) {
     return (
         <blockquote className="quote-card">
             "{quoteText}"
@@ -9,6 +9,7 @@ function QuoteCard({ quoteText, characterName, isQuoteEpic }) {
                 - {characterName}
                 {isQuoteEpic && <span style={{ marginLeft: '10px' }}>🌟</span>}
             </footer>
+            {children}
         </blockquote>
     )
 }
