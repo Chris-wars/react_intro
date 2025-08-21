@@ -11,12 +11,14 @@ import QuoteCard from './QuoteCard';
     { id: 7, quote: "Hodor!", character: "Hodor", epic: false },
     { id: 8, quote: "Valar Morghulis.", character: "Jaqen H'ghar", epic: true },
     { id: 9, quote: "Die Königin ist tot. Lang lebe die Königin.", character: "Daenerys Targaryen", epic: false },
-
+    { id: 10, quote: "Ein Mann hat keine Namen.", character: "Jaqen H'ghar", epic: true },
   ]
 
 function handleLike(characterName) {
   console.log(`${characterName} Zitat wurde geliked!`);
-};
+
+}
+
 
 function App() {
   return (

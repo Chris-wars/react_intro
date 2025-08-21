@@ -1,3 +1,18 @@
+.App-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.App > *:not(.App-bg-overlay) {
+  position: relative;
+  z-index: 1;
+}
 .Button {
   background-color: #000000;
   border: none;
@@ -36,7 +51,7 @@
 
 .App {
   text-align: center;
-  background-image: url('https://www.sky.de/static/img/serienhighlights/sky_16-03_gameofthrones-uebersicht_sub_s.jpg');
+  background-image: url('https://static05.galaxus.com/im/Files/2/1/1/3/9/7/9/6/game_of_thrones_intro_map_westeros_elastic21.jpeg?impolicy=teaser&resizeWidth=700&resizeHeight=350');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,26 +67,7 @@
 
 
 
-.App-bg-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.7); /* 0.7 = 70% transparent, stärkerer Effekt */
-  z-index: 0;
-  pointer-events: none;
-}
 
-.App > *:not(.App-bg-overlay) {
-  position: relative;
-  z-index: 1;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
