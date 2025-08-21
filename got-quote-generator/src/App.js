@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 import QuoteCard from './QuoteCard';
 
   const gotQuotes = [
@@ -21,33 +22,45 @@ function handleLike(characterName) {
 
 
 function App() {
+
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+
+  function showNextQuote() {
+    setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % gotQuotes.length);
+  };
+
+  const currentQuote = gotQuotes[currentQuoteIndex];
+
   return (
     <div className="App">
-      <div className="App-bg-overlay"></div>
       <header className="App-header">
         <h1>Game of Thrones Zitat-Generator</h1>
         <p>Ein Ort für Weisheit (und Sarkasmus) aus Westeros.</p>
       </header>
       <main>
-        {gotQuotes.map(q => (
-          <QuoteCard 
-            key={q.id}
-            quoteText={q.quote}
-            characterName={q.character}
-            isQuoteEpic={q.epic}
-          >
-            <button 
-            onClick={() => handleLike(q.character)}
-            type="button"
-            className="Button">Nice!
-              <span role="img" aria-label="thumbs up">👍</span>
-            </button>
-          </QuoteCard>
-        ))}
+        <QuoteCard 
+          key={currentQuote.id}
+          quoteText={currentQuote.quote}
+          characterName={currentQuote.character}
+          isQuoteEpic={currentQuote.epic}
+        />
+        <button
+          onClick={showNextQuote}
+          style={{
+            backgroundColor: '#DAA520',
+            color: 'white',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            marginTop: '20px',
+            fontSize: '1.1em',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+          }}
+        >
+          Nächstes Zitat »
+        </button>
       </main>
-      <footer>
-        <p>© 2025 Game of Thrones Zitat-Generator Deine Mutter Edition</p>
-      </footer>
     </div>
   );
 }
