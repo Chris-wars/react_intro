@@ -61,9 +61,9 @@ function App() {
       try {
         // Simulierte Ladezeit (1 Sekunde)
         await new Promise(resolve => setTimeout(resolve, 1000));
-        if (Math.random() < 0.7) {
-          throw new Error("Netzwerkfehler");
-        }
+        // if (Math.random() < 0.7) {
+        //   throw new Error("Netzwerkfehler");
+        // }
         // Wähle das aktuelle Zitat aus dem Array
         const selectedQuote = gotQuotes[currentQuoteIndex];
         setFetchedQuote(selectedQuote);
