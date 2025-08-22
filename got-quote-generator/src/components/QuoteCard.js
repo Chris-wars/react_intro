@@ -1,11 +1,17 @@
+
+// =============================================
+// QuoteCard – Einzelne Zitatkarte
+// =============================================
+
 import React from "react";
+import styles from './QuoteCard.module.css';
 
 
-function QuoteCard({ quoteText, characterName, isQuoteEpic, children, className }) {
+function QuoteCard({ quoteText, characterName, isQuoteEpic, children }) {
     return (
-        <blockquote className={className ? className : "quote-card"}>
+        <blockquote className={styles.quoteCard}>
             "{quoteText}"
-            <footer className="quote-character">
+            <footer className={styles.quoteCharacter}>
                 - {characterName}
                 {isQuoteEpic && <span style={{ marginLeft: '10px' }}>🌟</span>}
             </footer>

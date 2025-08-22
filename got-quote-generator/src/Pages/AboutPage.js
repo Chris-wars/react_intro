@@ -5,7 +5,7 @@
 
 // Importiere React und das CSS-Modul für About-spezifische Styles
 import React from "react";
-import styles from './About.module.css';
+import styles from '../components/About.module.css';
 
 function AboutPage() {
     return (

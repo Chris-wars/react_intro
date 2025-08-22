@@ -4,7 +4,7 @@
 // =============================================
 
 // Importiere das CSS-Modul für Home-spezifische Styles
-import styles from './Home.module.css';
+import styles from '../components/Home.module.css';
 
 // Importiere React und benötigte Hooks
 import React, { useEffect, useState } from 'react';
@@ -132,7 +132,6 @@ function Homepage() {
             quoteText={fetchedQuote.quote}
             characterName={fetchedQuote.character}
             isQuoteEpic={fetchedQuote.epic}
-            className={styles.quoteCard}
           />
         )}
 
