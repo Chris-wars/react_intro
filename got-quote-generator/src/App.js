@@ -10,6 +10,9 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1>Game of Thrones Zitat-Generator</h1>
+        <p className='App-subtitle'>Lass dich von den klügsten ode dümmsten Köpfen Westeros inspirieren!</p>
+        
+        {/* Navigation */}
         <nav className='main-nav'>
           <Link to="/" className="nav-link Button">Home</Link>
           <Link to="/about" className="nav-link Button">Über uns</Link>

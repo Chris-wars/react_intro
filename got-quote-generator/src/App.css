@@ -1,3 +1,19 @@
+/* Subtitel unter dem Haupttitel optisch anpassen */
+.App-subtitle {
+  color: #ffe7b0;
+  background: rgba(20, 30, 40, 0.82);
+  padding: 10px 28px 8px 28px;
+  border-radius: 10px;
+  font-size: 1.18rem;
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  margin-bottom: 18px;
+  margin-top: -8px;
+  text-shadow: 0 1px 6px #000, 0 1px 0 #fff2;
+  border: 1px solid #ffd37533;
+}
 /* Überschrift im Header optisch anpassen */
 .App-header h1 {
   color: #ffd375;
