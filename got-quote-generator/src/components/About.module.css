@@ -1,4 +1,14 @@
-/* AboutPage spezifische Styles */
+
+/*
+========================================
+ About.module.css – Styles für die AboutPage
+========================================
+
+Hier findest du alle spezifischen Styles für die About-Seite, wie Layout, Karte und Text.
+Jeder Abschnitt ist klar kommentiert und optisch abgesetzt.
+*/
+
+/* Haupt-Container für die AboutPage */
 .aboutContainer {
   min-height: 80vh;
   display: flex;
@@ -6,6 +16,7 @@
   justify-content: center;
 }
 
+/* Karte mit App-Infos */
 .aboutCard {
   background: rgba(20, 30, 40, 0.85);
   border: 1px solid #123d49;
@@ -17,12 +28,14 @@
   text-align: center;
 }
 
+/* Überschrift in der About-Karte */
 .aboutCard h2 {
   color: #ffd375;
   margin-bottom: 1.2rem;
   font-size: 2rem;
 }
 
+/* Textabschnitt in der About-Karte */
 .aboutCard p {
   margin-bottom: 1.1rem;
   font-size: 1.1em;
