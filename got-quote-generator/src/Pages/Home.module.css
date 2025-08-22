@@ -1,0 +1,49 @@
+/* HomePage spezifische Styles */
+.appMainContent {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 2.5rem 1.2rem 2rem 1.2rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.quoteCard {
+  font-style: italic;
+  color: #61dafb;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  border: 1px solid #123d49;
+  margin: 18px 0;
+  background: rgba(20, 30, 40, 0.85);
+  border-radius: 10px;
+  padding: 1.2em 1.5em 1.2em 1.2em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.epicMessageBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.epicMessage {
+  background: rgba(20, 30, 40, 0.85);
+  color: #F8C471;
+  font-style: italic;
+  font-size: 1.2em;
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  margin: 16px 0 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: inline-block;
+}
+
+.quoteCharacter {
+  font-size: 0.8em;
+  color: rgb(255, 211, 117);
+  margin-top: 5px;
+  display: block;
+}

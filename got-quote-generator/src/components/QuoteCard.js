@@ -1,9 +1,9 @@
 import React from "react";
 
 
-function QuoteCard({ quoteText, characterName, isQuoteEpic, children }) {
+function QuoteCard({ quoteText, characterName, isQuoteEpic, children, className }) {
     return (
-        <blockquote className="quote-card">
+        <blockquote className={className ? className : "quote-card"}>
             "{quoteText}"
             <footer className="quote-character">
                 - {characterName}
