@@ -1,21 +1,64 @@
-/* QuoteCard spezifisches Styling */
 
-.quoteCard {
-  font-style: italic;
-  color: #61dafb;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  border: 1px solid #123d49;
-  margin: 18px 0;
-  background: rgba(20, 30, 40, 0.85);
-  border-radius: 10px;
-  padding: 1.2em 1.5em 1.2em 1.2em;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+/* =============================================
+   QuoteCard spezifisches Styling (modern & responsive)
+   ============================================= */
+
+/* Hauptkarte für das Zitat */
+.quoteCard, .card {
+  background: linear-gradient(120deg, rgba(20,30,40,0.92) 80%, #3a3f4a 100%);
+  padding: 1.5em 2em 1.5em 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 6px 12px rgba(0,0,0,0.12);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border: 1px solid #234;
+  box-sizing: border-box;
+  margin: 18px auto;
 }
 
-.quoteCharacter {
-  font-size: 0.8em;
-  color: rgb(255, 211, 117);
+/* Zitattext */
+.quoteText {
+  font-family: 'Merriweather', Georgia, serif;
+  font-style: italic;
+  color: #F8C471;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Footer-Bereich (Charakter & Stern) */
+.footer {
+  font-size: 0.9em;
+  color: #bbb;
+  margin-top: 15px;
+}
+
+/* Charaktername */
+.characterName, .quoteCharacter {
+  font-weight: bold;
+  color: #ffd375;
+  font-size: 1.15em;
   margin-top: 5px;
-  display: block;
+  display: inline-block;
+}
+
+/* Epischer Stern */
+.epicStar {
+  margin-left: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Responsive Anpassungen für die QuoteCard */
+@media (max-width: 768px) {
+  .quoteCard, .card {
+    padding: 15px;
+    border-radius: 0;
+  }
+  .quoteText {
+    font-size: 1.3em;
+  }
 }
