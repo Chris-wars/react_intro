@@ -1,11 +1,20 @@
-// Haupt-CSS für das App-Layout und Styling importieren
+
+// =============================================
+// HomePage – Startseite mit Zufallszitaten
+// =============================================
+
+// Importiere das CSS-Modul für Home-spezifische Styles
 import styles from './Home.module.css';
-// React und benötigte Hooks importieren
+
+// Importiere React und benötigte Hooks
 import React, { useEffect, useState } from 'react';
-// Die Komponente für einzelne Zitatkarten importieren
+
+// Importiere die Komponente für einzelne Zitatkarten
 import QuoteCard from './../components/QuoteCard';
 
+  // =====================
   // Beispielhafte Game of Thrones Zitate als Array von Objekten
+  // =====================
   const gotQuotes = [
     { id: 1, quote: "Der Winter naht.", character: "Ned Stark", epic: true },
     { id: 2, quote: "Ein Lannister begleicht stets seine Schulden.", character: "Tyrion Lannister", epic: false },
@@ -20,26 +29,35 @@ import QuoteCard from './../components/QuoteCard';
   ]
 
 
+
 // Beispiel-Funktion für Like-Events (kann für Analytics genutzt werden)
 function handleLike(characterName) {
+  // Hier könnte man z.B. ein Analytics-Event senden
   console.log(`${characterName} Zitat wurde geliked!`);
 }
 
 
 
 
-// Hauptkomponente der App
+
+// =====================
+// Hauptkomponente der Startseite
+// =====================
 function Homepage() {
+
 
 
   // State für den aktuellen Zitat-Index
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+
   // Funktion zum Anzeigen des nächsten Zitats
   function showNextQuote() {
     setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % gotQuotes.length);
   };
-  // Das aktuell angezeigte Zitat-Objekt
+
+  // Das aktuell angezeigte Zitat-Objekt (wird für spätere Features bereitgehalten)
   const currentQuote = gotQuotes[currentQuoteIndex];
+
 
   // State und Funktion für die Anzeige der epischen Nachricht
   const [showEpicMessage, setShowEpicMessage] = useState(true);
@@ -47,12 +65,18 @@ function Homepage() {
     setShowEpicMessage(!showEpicMessage);
   };
 
+
   // State für Ladevorgang, Fehler und das "abgerufene" Zitat
+  // isLoading: Zeigt an, ob gerade geladen wird
+  // error: Fehlertext, falls das Laden fehlschlägt
+  // fetchedQuote: Das aktuell geladene Zitat-Objekt
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [fetchedQuote, setFetchedQuote] = useState(null);
 
+
   // Simuliere das Laden eines Zitats (z.B. von einer API)
+  // useEffect sorgt dafür, dass bei jedem Wechsel des Index ein neues Zitat geladen wird
   useEffect(() => {
     const fetchQuote = async () => {
       setIsLoading(true);
@@ -60,10 +84,7 @@ function Homepage() {
       try {
         // Simulierte Ladezeit (1 Sekunde)
         await new Promise(resolve => setTimeout(resolve, 1000));
-        // if (Math.random() < 0.7) {
-        //   throw new Error("Netzwerkfehler");
-        // }
-        // Wähle das aktuelle Zitat aus dem Array
+        // Hier könnte ein echter API-Call stehen
         const selectedQuote = gotQuotes[currentQuoteIndex];
         setFetchedQuote(selectedQuote);
       } catch (err) {
@@ -77,14 +98,18 @@ function Homepage() {
     fetchQuote();
   }, [currentQuoteIndex, gotQuotes]);
 
-  // JSX-Return: Aufbau der App
+
+  // =====================
+  // JSX-Return: Aufbau der Seite
+  // =====================
   return (
     <div className="App">
       {/* Overlay für dunklen Hintergrund */}
       <div className="App-bg-overlay"></div>
-      {/* Kopfbereich */}
-      <header className="App-header">
-      </header>
+
+      {/* Kopfbereich (leer, da global in App.js) */}
+      <header className="App-header"></header>
+
       <main className={styles.appMainContent}>
         {/* Ladeanzeige */}
         {isLoading && (
@@ -110,7 +135,6 @@ function Homepage() {
             className={styles.quoteCard}
           />
         )}
-        
 
         {/* Epische Nachricht anzeigen, wenn aktiviert */}
         {!error && showEpicMessage && fetchedQuote && fetchedQuote.epic && (
@@ -127,6 +151,7 @@ function Homepage() {
             </button>
           </div>
         )}
+
         {/* Button anzeigen, wenn episch aber Nachricht ausgeblendet */}
         {!error && fetchedQuote && fetchedQuote.epic && !showEpicMessage && (
           <button
@@ -154,4 +179,6 @@ function Homepage() {
   );
 }
 
+
+// Exportiere die Startseiten-Komponente
 export default Homepage;

@@ -1,4 +1,15 @@
-/* Subtitel unter dem Haupttitel optisch anpassen */
+/*
+========================================
+ App.css – Zentrales Styling für die App
+========================================
+
+Hier findest du alle globalen Styles für das Layout, Buttons, Navigation und den Hintergrund.
+Jeder Abschnitt ist klar kommentiert und optisch abgesetzt.
+*/
+
+/* =====================
+  Subtitel unter dem Haupttitel
+  ===================== */
 .App-subtitle {
   color: #ffe7b0;
   background: rgba(20, 30, 40, 0.82);
